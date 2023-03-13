@@ -1,6 +1,7 @@
 import './style-unit.css'
 import {unit} from '../../helpers/unitGallaryList'
 import React, { useState } from "react";
+<<<<<<< HEAD
 import {Component} from 'react';
 
 class UnitGallary extends Component{
@@ -27,6 +28,22 @@ class UnitGallary extends Component{
         {
             unit.map((item)=>{
                 
+=======
+
+const UnitGallary = () => {
+    const [counter, setCounter] = useState(0)
+    const handleClick1 = () => {
+        setCounter(counter + 1)
+      }
+    const handleClick2 = () => {
+    setCounter(counter - 1)
+    }
+
+    return ( 
+       <>
+        {
+            unit.map((item)=>{
+>>>>>>> 9ef7edf (	new file:   diplom/src/components/unitGallary/UnitGallary.js)
                 return(
                     <>
                         <div className="col-md-4 mx-aut unitPic" data-toggle="modal" data-target="#exampleModal">
@@ -50,14 +67,21 @@ class UnitGallary extends Component{
 
                                 </div>
                                 <div class="modal-footer">
+<<<<<<< HEAD
                                     <p>{like}</p>
                                     <button type="button" class="btn btn-primary" onClick={() => {this.handleLike()}}>Нравится</button>
                                     <button type="button" class="btn btn-secondary" onClick={() => {this.handleUnLike()}}>Не нравится</button>
+=======
+                                    <p>{counter}</p>
+                                    <button type="button" class="btn btn-primary" onClick={handleClick1}>Нравится</button>
+                                    <button type="button" class="btn btn-secondary" onClick={handleClick2}>Не нравится</button>
+>>>>>>> 9ef7edf (	new file:   diplom/src/components/unitGallary/UnitGallary.js)
                                 </div>
                                 </div>
                             </div>
                         </div>
                     </>
+<<<<<<< HEAD
                 )
             })}
         </>
@@ -65,6 +89,13 @@ class UnitGallary extends Component{
 
     }
     
+=======
+                       
+                )
+            })}
+       </>
+     );
+>>>>>>> 9ef7edf (	new file:   diplom/src/components/unitGallary/UnitGallary.js)
 }
  
 export default UnitGallary;
