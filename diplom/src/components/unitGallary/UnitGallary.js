@@ -1,20 +1,32 @@
 import './style-unit.css'
 import {unit} from '../../helpers/unitGallaryList'
 import React, { useState } from "react";
+import {Component} from 'react';
 
-const UnitGallary = () => {
-    const [counter, setCounter] = useState(0)
-    const handleClick1 = () => {
-        setCounter(counter + 1)
-      }
-    const handleClick2 = () => {
-    setCounter(counter - 1)
-    }
+class UnitGallary extends Component{
+    
+    state = {
+        like: 0
+      };
+    
+      handleLike = () => {
+        this.setState({
+          like: this.state.like + 1
+        });
+      };
+      handleUnLike = () => {
+        this.setState({
+          like: this.state.like - 1
+        });
+      };
 
-    return ( 
-       <>
+    render(){
+        const {like} = this.state;
+        return ( 
+        <>
         {
             unit.map((item)=>{
+                
                 return(
                     <>
                         <div className="col-md-4 mx-aut unitPic" data-toggle="modal" data-target="#exampleModal">
@@ -38,19 +50,21 @@ const UnitGallary = () => {
 
                                 </div>
                                 <div class="modal-footer">
-                                    <p>{counter}</p>
-                                    <button type="button" class="btn btn-primary" onClick={handleClick1}>Нравится</button>
-                                    <button type="button" class="btn btn-secondary" onClick={handleClick2}>Не нравится</button>
+                                    <p>{like}</p>
+                                    <button type="button" class="btn btn-primary" onClick={() => {this.handleLike()}}>Нравится</button>
+                                    <button type="button" class="btn btn-secondary" onClick={() => {this.handleUnLike()}}>Не нравится</button>
                                 </div>
                                 </div>
                             </div>
                         </div>
                     </>
-                       
                 )
             })}
-       </>
-     );
+        </>
+        );
+
+    }
+    
 }
  
 export default UnitGallary;
