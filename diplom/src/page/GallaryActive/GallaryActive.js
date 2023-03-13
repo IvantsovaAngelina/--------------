@@ -7,7 +7,7 @@ const GallaryActive = () => {
             <div className='container'>
                 <div className='row justify-content-center'>
                     <div className='col-md-12'>
-                        <h1>Галлерея работ</h1>
+                        <h1>Галерея работ</h1>
                     </div>
                 </div>
                 <div className='row'>
