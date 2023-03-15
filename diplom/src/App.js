@@ -18,14 +18,14 @@ function App() {
     <div className="App">
       <Header/>
       <main className='flex-shrink-0'>
-        {/* <GallaryActive/> */}
+        <GallaryActive/>
         {/* <Login/> */}
         {/* <PersonalAccountUser/> */}
         {/* <PersonalAccountJury/> */}
         {/* <Gallary/> */}
         {/* <Registration/> */}
         {/* <Home/> */}
-        <Nominations/>
+        {/* <Nominations/> */}
         {/* <Konkurs/> */}
       </main>
       <Footer/>

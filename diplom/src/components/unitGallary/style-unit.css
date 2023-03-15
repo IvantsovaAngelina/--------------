@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9ef7edf (	new file:   diplom/src/components/unitGallary/UnitGallary.js)
 .unitPic{
     padding: 1%;
     border: 1px solid #0000003b;
@@ -15,14 +11,9 @@
 }
 
 .unitImg{
-    width: 90%;
-    
-    
-<<<<<<< HEAD
-=======
+    width: 90%; 
+}
+
 h1{
     color: darkmagenta;
->>>>>>> 583f07e (Добавление модального окна)
-=======
->>>>>>> 9ef7edf (	new file:   diplom/src/components/unitGallary/UnitGallary.js)
 }

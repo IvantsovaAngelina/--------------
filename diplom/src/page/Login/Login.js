@@ -12,11 +12,6 @@ const Login = () => {
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus=""/>
                             <label for="inputPassword" class="sr-only">Пароль</label>
                             <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required=""/>
-                            <div class="checkbox mb-3">
-                                <label>
-                                <input type="checkbox" value="remember-me"/> Запомнить меня
-                                </label>
-                            </div>
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
                         </form>
                     </div>
