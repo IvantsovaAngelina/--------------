@@ -1,0 +1,19 @@
+.unitPic{
+    padding: 1%;
+    border: 1px solid #0000003b;
+    border-radius: 15px;
+}
+
+.unitPic p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.unitImg{
+    width: 90%; 
+}
+
+h1{
+    color: darkmagenta;
+}

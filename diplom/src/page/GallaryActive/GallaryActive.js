@@ -1,4 +1,5 @@
 import UnitGallary from '../../components/unitGallary/UnitGallary';
+import {unit} from '../../helpers/unitGallaryList'
 import './style-gallaryActive.css'
 
 const GallaryActive = () => {
@@ -11,7 +12,16 @@ const GallaryActive = () => {
                     </div>
                 </div>
                 <div className='row'>
-                    <UnitGallary/>
+                    {
+                        unit.map(
+                            (item) => {
+                                return(
+                                    <UnitGallary img ={item.img} name = {item.name} nomination={item.nomination} university = {item.university} teacher={item.teacher}/>
+                                )
+                            }
+                        )
+
+                    }
                 </div>
             </div>
          </>
