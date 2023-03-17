@@ -12,16 +12,7 @@ const GallaryActive = () => {
                     </div>
                 </div>
                 <div className='row'>
-                    {
-                        unit.map(
-                            (item) => {
-                                return(
-                                    <UnitGallary img ={item.img} name = {item.name} nomination={item.nomination} university = {item.university} teacher={item.teacher}/>
-                                )
-                            }
-                        )
-
-                    }
+                    <UnitGallary/>    
                 </div>
             </div>
          </>

@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { withHookFormMask } from 'use-mask-input';
 import './style-registration.css'
 
 const Registration = () => {
@@ -131,12 +132,13 @@ const Registration = () => {
                                 <div className='col-md-3'>
                                     <label className ='label-phone'>
                                     Номер телефона
+                                    
                                     <input
                                     className ='phone'
-                                    {...register('phone', 
-                                    {required: "Поле надо заполнить",
-                                    
-                                    })}
+                                    {...withHookFormMask(register('phone'), 
+                                    ['+7 (999) 999 99 99', '+7 (999) 999 99 99'],
+                                    {required: "Поле надо заполнить"}
+                                    )}
                                     /> 
                                     </label>
                                     <div style={{color: 'blue'}}>
