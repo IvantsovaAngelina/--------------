@@ -1,10 +1,9 @@
 import UnitGallary from '../../components/unitGallary/UnitGallary';
-import {unit} from '../../helpers/unitGallaryList'
 import './style-gallaryActive.css'
 
 const GallaryActive = () => {
     return ( 
-        <>
+        <main>
             <div className='container'>
                 <div className='row justify-content-center'>
                     <div className='col-md-12'>
@@ -12,10 +11,14 @@ const GallaryActive = () => {
                     </div>
                 </div>
                 <div className='row'>
-                    <UnitGallary/>    
+                    <div className='col-md-12'>
+                        <div className='gallActive'>
+                            <UnitGallary/> 
+                        </div>
+                    </div> 
                 </div>
             </div>
-         </>
+         </main>
      );
 }
  
