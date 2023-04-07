@@ -21,9 +21,4 @@ const UnitGallary = () => {
      );
 }
 
-
-    
-                       
- 
- 
 export default UnitGallary;

@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import UploadFile from '../../components/uploadFile/UploadFile';
 import './style-PersonalAccount.css'
 
 
@@ -15,9 +16,6 @@ const PersonalAccountUser = () => {
         console.log (JSON.stringify(data))
       }
 
-      const fileSubmit = (data) => {
-        console.log (JSON.stringify(data))
-      }
 
     return ( 
     <main>
@@ -44,7 +42,7 @@ const PersonalAccountUser = () => {
             />
             </label>
             <div style={{color: 'blue'}}>
-                {errors?.firstName && <p>{errors?.firstName?.message || "Имени у вас нет" }</p>}
+                {errors?.firstName && <p className ='errorMassage'>{errors?.firstName?.message || "Имени у вас нет" }</p>}
             </div>
             </div>
             </div>
@@ -60,7 +58,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.lastName && <p>{errors?.lastName?.message || "Фамилии у вас нет" }</p>}
+                {errors?.lastName && <p className ='errorMassage'>{errors?.lastName?.message || "Фамилии у вас нет" }</p>}
                 </div>
             </div>
             </div>
@@ -76,7 +74,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.email && <p>{errors?.email?.message || "где Email?" }</p>}
+                {errors?.email && <p className ='errorMassage'>{errors?.email?.message || "где Email?" }</p>}
                 </div>
             </div>
             </div>
@@ -94,7 +92,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.bDate && <p>{errors?.bDate?.message || " " }</p>}
+                {errors?.bDate && <p className ='errorMassage'>{errors?.bDate?.message || " " }</p>}
                 </div>
             </div>
             <div className='col-md-3'>
@@ -109,7 +107,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.phone && <p>{errors?.phone?.message || " " }</p>}
+                {errors?.phone && <p className ='errorMassage'>{errors?.phone?.message || " " }</p>}
                 </div>
             </div>
             </div>
@@ -126,7 +124,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.country && <p>{errors?.country?.message || "Надо заполнить" }</p>}
+                {errors?.country && <p className ='errorMassage'>{errors?.country?.message || "Надо заполнить" }</p>}
                 </div>
             </div>
             <div className='col-md-3'>
@@ -140,7 +138,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.city && <p>{errors?.city?.message || "Надо заполнить" }</p>}
+                {errors?.city && <p className ='errorMassage'>{errors?.city?.message || "Надо заполнить" }</p>}
                 </div>
             </div>
             </div>
@@ -156,7 +154,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.university && <p>{errors?.university?.message || "Надо заполнить" }</p>}
+                {errors?.university && <p className ='errorMassage'>{errors?.university?.message || "Надо заполнить" }</p>}
                 </div>
             </div>
             <div className='col-md-3'>
@@ -170,7 +168,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.specialty && <p>{errors?.specialty?.message || "Надо заполнить" }</p>}
+                {errors?.specialty && <p className ='errorMassage'>{errors?.specialty?.message || "Надо заполнить" }</p>}
                 </div>
             </div>
             </div>
@@ -187,7 +185,7 @@ const PersonalAccountUser = () => {
                 /> 
                 </label>
                 <div style={{color: 'blue'}}>
-                {errors?.level && <p>{errors?.level?.message || "Надо заполнить" }</p>}
+                {errors?.level && <p className ='errorMassage'>{errors?.level?.message || "Надо заполнить" }</p>}
                 </div>
             </div>
             <div className='col-md-4'>
@@ -196,27 +194,7 @@ const PersonalAccountUser = () => {
             </div>
         </div>
     </form>
-    <form onSubmit={handleSubmit(fileSubmit)}>
-        <div className='container'>
-            <div className='row justify-content-center'>
-                <div className='col-md-6'>
-                <label className='label-specialty'>
-                Загрузите файл
-                <input className='fileUp' type="file" {...register("fileUp",
-                {required: "Поле надо заполнить"}
-                )
-               }/>
-                </label>
-                </div>
-                <div style={{color: 'blue'}}>
-                {errors?.fileUp && <p>{errors?.fileUp?.message || "Вы не отправили файл" }</p>}
-                </div>
-                <div className = 'col-md-6'>
-                    <input className = 'btn-submitFile' type="submit" value='Отправить'/>
-                </div>
-            </div>
-        </div>
-    </form>
+    <UploadFile/>
     </main> );
 }
  

@@ -136,7 +136,7 @@ const Registration = () => {
                                     <input
                                     className ='phone'
                                     {...withHookFormMask(register('phone'), 
-                                    ['+7 (999) 999 99 99', '+7 (999) 999 99 99'],
+                                    ['8 999 999 99 99', '8 999 999 99 99'],
                                     {required: "Поле надо заполнить"}
                                     )}
                                     /> 
