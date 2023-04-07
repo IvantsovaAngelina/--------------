@@ -18,12 +18,12 @@ const Registration = () => {
         reset()
       }
     return ( 
-        <>
+        <main>
             <div className="container">
                 <div className = "row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <h1>Регистрация</h1>
-                        <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+                        <p className='registrationP'>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
                         <hr/>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className='container'>
@@ -136,7 +136,7 @@ const Registration = () => {
                                     <input
                                     className ='phone'
                                     {...withHookFormMask(register('phone'), 
-                                    ['+7 (999) 999 99 99', '+7 (999) 999 99 99'],
+                                    ['8 999 999 99 99', '8 999 999 99 99'],
                                     {required: "Поле надо заполнить"}
                                     )}
                                     /> 
@@ -250,7 +250,7 @@ const Registration = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </main>
      );
 }
  

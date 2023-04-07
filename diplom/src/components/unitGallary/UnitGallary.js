@@ -9,7 +9,7 @@ const UnitGallary = () => {
             (item) => {
                 return(
                     <>
-                    <div className="col-md-4 mx-aut unitPic" data-toggle="modal" data-target={'#'+item.userName}>
+                    <div className="unitPic" data-toggle="modal" data-target={'#'+item.userName}>
                         <img className='unitImg' src={item.img}/>
                     </div>
                     <ModalWindow img ={item.img} name = {item.name} nomination={item.nomination} university = {item.university} teacher={item.teacher} userName={item.userName}/>
@@ -21,9 +21,4 @@ const UnitGallary = () => {
      );
 }
 
-
-    
-                       
- 
- 
 export default UnitGallary;
