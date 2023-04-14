@@ -17,6 +17,7 @@ const Registration = () => {
     const [data, setData] = useState({});
     
     const navi = useNavigate()
+
     const handleSubmit = (event) => {
     event.preventDefault();
     const user = {
@@ -38,6 +39,7 @@ const Registration = () => {
     axios.post('http://127.0.0.1:8080/user/register', user, {
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
     })
       .then((response) => {
@@ -45,8 +47,7 @@ const Registration = () => {
         console.log(response.data)
         alert('Регистрация прошла успешно!')
         navi('/')
-      });
-
+      }); 
       
   };
 
