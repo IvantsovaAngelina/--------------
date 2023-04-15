@@ -3,10 +3,20 @@ import {useForm} from 'react-hook-form'
 const UploadFile = () => {
     const {register, handleSubmit} = useForm()
 
-    const onChange=(e) =>{
-        const file = e.target.file[0]
-        const storageRef = app.storage().ref()
-        
+    const onChange = async (e) => {
+        const file = e.target.files[0]
+        const formData = new FormData()
+        formData.append('file', file)
+        try {
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            const data = await response.json()
+            console.log(data)
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     return ( 
