@@ -72,6 +72,11 @@ label {
     margin-left: 25%;
   }
 
+  .btn-submit:hover {
+    color:#FFBCE4;
+    background:#FC1367;
+  }
+
   .roleid{
     display: none;
   }
